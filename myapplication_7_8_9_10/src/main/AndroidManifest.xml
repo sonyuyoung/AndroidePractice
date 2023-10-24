@@ -9,6 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Myapp_test6_SyyTest">
         <activity
+            android:name=".ch8_Test.Test8Activity"
+            android:exported="true" />
+        <activity
             android:name=".TestActivity2"
             android:exported="true" />
         <activity
