@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity"
+    android:background="#3F51B5"
+   >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="테스트입력창확인중 "
+            android:inputType="phone">
+
+
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/checkbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="체크1"
+                android:textSize="29sp"
+                android:textColor="#fff"/>
+            <CheckBox
+                android:id="@+id/checkbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="체크2"
+                android:textSize="29sp"
+                android:textColor="#fff"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="남자"
+            android:textColor="#fff">
+        </RadioButton>
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여자"
+                android:textColor="#fff">
+
+        </RadioButton>
+        </RadioGroup>
+        </LinearLayout>
+    <Button
+        android:id="@+id/showBtn2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF9800"
+        android:text="이미지 보여줘"
+        android:fontFamily="@font/nexonmed"
+        />
+
+
+        <Button
+            android:id="@+id/hideBtn2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF9800"
+            android:fontFamily="@font/nexonmed"
+            android:text="이미지 없애조" />
+
+
+
+        <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+            android:gravity="center">
+        <ImageView
+            android:id="@+id/profileImg"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:maxWidth="150dp"
+            android:maxHeight="150dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/mat"/>
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:text="손유영"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/nexonlight"
+            android:textColor="#fff">
+        </TextView>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:text="닉네임 : 영이영 "
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/nexonlight"
+            android:textColor="#fff">
+        </TextView>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="http://naver.com"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:autoLink="web"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전화번호 : +821047332048"
+            android:textSize="20sp"
+            android:autoLink="phone"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TestActivity2">
+
+
+        <LinearLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="버튼"></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="버튼2"></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="버튼3"></Button>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay2"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/lay1"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="버튼4"></Button>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="버튼5"
+                android:backgroundTint="#FF9800"></Button>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="버튼6"
+                android:backgroundTint="@color/design_default_color_primary"></Button>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/lay2"
+            android:background="#009688">
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:text="텍스트 컨텐츠"
+                android:textSize="15sp"
+                android:background="#FF5722"
+                android:textColor="#fff"
+                android:gravity="bottom|right"
+                android:layout_gravity="center_horizontal"
+                ></TextView>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:text="텍스트 컨텐츠"
+                android:textSize="15sp"
+                android:background="#FF9800"
+                android:textColor="#fff"
+                android:gravity="bottom|right"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/lay4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/lay3">
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/matzip"
+                ></ImageView>
+            <Button
+                android:id="@+id/frameBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="프레임 테스트"
+                android:backgroundTint="@color/design_default_color_primary">
+            </Button>
+        </FrameLayout>
+
+        <GridLayout
+            android:id="@+id/lay5"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:columnCount="3"
+            android:rowCount="2"
+            app:layout_constraintTop_toBottomOf="@+id/lay4"
+            >
+            <Button android:text="1"></Button>
+            <Button android:text="2"></Button>
+            <Button android:text="3"></Button>
+            <Button android:text="4"></Button>
+            <Button android:text="5"></Button>
+            <Button android:text="6"></Button>
+            <Button android:text="7"></Button>
+            <Button android:text="8"></Button>
+            <Button android:text="9"></Button>
+        </GridLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+
