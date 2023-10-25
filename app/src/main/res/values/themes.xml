@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.Myapp_test6_SyyTest" parent="Base.Theme.Myapp_test6_SyyTest" />
+    <style name="myTestCss">
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:fontFamily">@font/nexonmed</item>
+    </style>
 </resources>
