@@ -19,10 +19,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
         <Button
-            android:id="@+id/cutomDialogBtn"
+            android:id="@+id/soundTestBtn"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="커스텀 다이얼로그테스트"/>
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:id="@+id/customDialogBtn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="커스텀 다이얼 테스트 목록 요소 선택3 라디오 "/>
+
+        <Button
+            android:id="@+id/customDialogBtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="커스텀 다이얼 테스트 목록 요소 선택2 체크박스 "/>
+
+        <Button
+            android:id="@+id/customDialogBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="커스텀 다이얼 로그 테스트 목록 요소 선택 "/>
+
+        <Button
+            android:id="@+id/customDialogBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="커스텀 다이얼 로그 테스트 "/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

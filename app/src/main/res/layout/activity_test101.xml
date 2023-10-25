@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ch10_Test.Test10_1Activity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <Button
+                android:id="@+id/soundTestBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="소리"
+                />
+            <Button
+                android:id="@+id/customDialogBtn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="커스텀 다이얼 테스트 목록 요소 선택3 라디오 "/>
+
+            <Button
+                android:id="@+id/customDialogBtn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="커스텀 다이얼 테스트 목록 요소 선택2 체크박스 "/>
+
+            <Button
+                android:id="@+id/customDialogBtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="커스텀 다이얼 로그 테스트 목록 요소 선택 "/>
+
+            <Button
+                android:id="@+id/customDialogBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="커스텀 다이얼 로그 테스트 "/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <AnalogClock
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <DigitalClock
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chronometer1"
+                    android:format="시간 측정 : %s"
+                    android:gravity="center"
+                    android:textSize="30dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TimePicker
+                    android:timePickerMode="spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <DatePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/timeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간 다이얼로그 확인">
+            </Button>
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/myTestCss"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/dateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날짜 다이얼로그 확인">
+            </Button>
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/myTestCss"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/testToastBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="토스트 보여지고 사라지고 후처리 테스트 "
+                style="@style/myTestCss"/>
+            <ImageView
+                android:id="@+id/testImg"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/shapetest">
+            </ImageView>
+            <!--        <TextView-->
+            <!--            android:id="@+id/textView1"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:text="@string/app_intro"-->
+            <!--            android:textSize="30sp"-->
+            <!--            android:fontFamily="@font/nexonmed"-->
+            <!--            android:textColor="@color/design_default_color_primary">-->
+            <!--        </TextView>-->
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="소스코드 어쩌구"
+                android:textSize="30sp"
+                android:fontFamily="@font/nexonmed"
+                android:textColor="@color/design_default_color_primary">
+            </TextView>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="30sp"
+                android:fontFamily="@font/nexonmed"
+                android:textColor="@color/black">
+            </TextView>
+            <ImageView
+                android:layout_width="@dimen/profile_img_with"
+                android:layout_height="@dimen/profile_img_height"
+                android:src="@drawable/matzip">
+            </ImageView>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="글자색,배경, 재사용"
+                android:fontFamily="@font/nexonmed"
+                android:textColor="@color/design_default_color_primary">
+            </TextView>
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한번에 여러 css요소를 style속성으로 한번에 가져오기"
+                style="@style/myTestCss">
+            </TextView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/arrow_down_float">
+            </ImageView>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>

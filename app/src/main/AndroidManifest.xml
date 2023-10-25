@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!--  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 세트 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 13버전 이후 변경된 이미지 저장소 접근허용방식 -->
 
-<!---->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-<!--  세트   -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-<!--13버전 이후 변경된 이미지 저장소 접근허용방식 -->
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -22,6 +20,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Myapp_test6_SyyTest"
         tools:targetApi="31">
+        <activity
+            android:name=".ch10_Test.Test10_1Activity"
+            android:exported="true" />
+        <activity
+            android:name=".ch10_Test.Test10_2Activity"
+            android:exported="true" />
         <activity
             android:name=".ch9.Test9Activity"
             android:exported="true" />

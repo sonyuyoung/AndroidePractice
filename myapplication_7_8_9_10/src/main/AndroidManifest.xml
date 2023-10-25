@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+<!-- 이용자 입장 : 현재 앱에서 외부앱의 기능을 많이 이용하게되는데 ,
+        시스템앱 ex) 갤러리 , 카메라 , 캘린더 등 이용을 많이하게 되는데
+        특정 앱에 접근을 신청하는 양식임
+        1) 접근시 접근 레벨이 낮은 경우에는 이용자의 허가를 받지않아도 이용-> 네트워크, 와이파이
+        2) 접근레벨이 높은경우 : 이용자를 허가를 받는경우 : 정확한 위치등 파학할때
+        후에 앱 엑세스 권한에서 위치 허용하기 -->
+<!-- 와이파이를 위함  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<!-- 위치 찾기   -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<!-- 같이쓰면 더 위치를 정확하게 알수있게함   -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    
+<!--    변경된 이미지 저장소 접근허용 양식 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+<!--    외부저장소 -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
