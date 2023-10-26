@@ -5,8 +5,8 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.PendingIntent.FLAG_IMMUTABLE
 import android.app.PendingIntent.FLAG_MUTABLE
-
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.media.AudioAttributes
 import android.media.RingtoneManager
@@ -16,6 +16,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.RemoteInput
+import com.example.myapp_test6_syytest.R
 import com.example.myapp_test6_syytest.databinding.ActivityTest102Binding
 
 
@@ -53,6 +54,8 @@ class Test10_2Activity : AppCompatActivity() {
                 channel.description = "My Channel One 설명"
                 // 알림의 갯수를 아이콘 표시
                 channel.setShowBadge(true)
+                //채널에 시스템알림을 설정연결
+                // 음원, 이미지, uri , 영상등의 위치를 알려주는 타입  예시로 http://도메인주소이고 , contents://경로
                 val uri: Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
                 val audioAttributes = AudioAttributes.Builder()
                     .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
@@ -88,10 +91,16 @@ class Test10_2Activity : AppCompatActivity() {
             // 2번째 액션 인텐트 테스트 하기위해 잠시 주석.
             //builder.setContentIntent(pendingIntent)
 
-            // 특정 액션 추가 기능 넣기.
+            // 특정 액션 추가 기능 넣기. 더미
+            // 단순 페이지 이동으로 사용했었지만 다른 추가적인 기능으로도 사용이가능 .
+
             val actionIntent = Intent(this@Test10_2Activity, OneReceiver::class.java)
-            val actionPendingIntent = PendingIntent.getBroadcast(this@Test10_2Activity, 20,
-                actionIntent, FLAG_IMMUTABLE)
+            // 현재 엑티비티에서, 요청코드를 20번으로 구분 . 4대 컨포넌트중 하나인 OneReceiver
+            // activity -> other -> 브로드 캐스트
+            val actionPendingIntent = PendingIntent.getBroadcast(
+                this@Test10_2Activity, 20,
+                actionIntent, FLAG_IMMUTABLE
+            )
             builder.addAction(
                 NotificationCompat.Action.Builder(
                     android.R.drawable.stat_notify_more,
@@ -108,8 +117,10 @@ class Test10_2Activity : AppCompatActivity() {
                 build() // 이 부분을 누락하지 않도록 수정
             }
             val replyIntent = Intent(this@Test10_2Activity, ReplyReceiver::class.java)
-            val replyPendingIntent = PendingIntent.getBroadcast(this@Test10_2Activity, 30,
-                replyIntent, FLAG_MUTABLE)
+            val replyPendingIntent = PendingIntent.getBroadcast(
+                this@Test10_2Activity, 30,
+                replyIntent, FLAG_MUTABLE
+            )
             // 답장 액션 추가하기.
             builder.addAction(
                 NotificationCompat.Action.Builder(
@@ -118,6 +129,39 @@ class Test10_2Activity : AppCompatActivity() {
                     replyPendingIntent
                 ).addRemoteInput(remoteInput).build()
             )
+
+            //알림 발생 시키기
+            manager.notify(11, builder.build())
+            //프로그래스 진행바
+//            builder.setProgress(100,0,false)
+//            thread {
+//                for(i in 1..100){
+//                builder.setProgress(100,i,false)
+////                    builder.setProgress(100,i,true)
+//                manager.notify(11,builder.build())
+//                    SystemClock.sleep(100)
+//            }
+//            }
+            // 큰이미지 첨부해서 알림보내기
+            val bigPicture = BitmapFactory.decodeResource(resources, R.drawable.matzip)
+            val bigStyle = NotificationCompat.BigPictureStyle()
+            bigStyle.bigPicture(bigPicture)
+            builder.setStyle(bigStyle)
+
+            // 긴텍스트
+            val bigTextStyle = NotificationCompat.BigTextStyle()
+            bigTextStyle.bigText(resources.getString(R.string.long_text))
+            builder.setStyle(bigTextStyle)
+
+
+            // 박스 스타일 형식
+            val boxStyle = NotificationCompat.InboxStyle()
+            boxStyle.addLine("1코스 - 짜장면")
+            boxStyle.addLine("2코스 - 우동")
+            boxStyle.addLine("1코스 - 잡채밥")
+            boxStyle.addLine("1코스 - 해물우동")
+            builder.setStyle(boxStyle)
+
 
             //알림 발생 시키기
             manager.notify(11, builder.build())
