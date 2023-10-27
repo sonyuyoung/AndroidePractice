@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ch11_Test.viewPager.fragment.SampleFragment1">
+    tools:context=".ch11_Test.viewPageandrecyclerview.fragment.Test3Fragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,16 +13,18 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/a">
+            android:src="@drawable/bn">
 
         </ImageView>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="다같이!"
-            style="@style/myTestCss"></TextView>
+            android:text="바니다스의수기!"
+            style="@style/myTestCss"
+            android:background="@color/design_default_color_primary"
+            android:textColor="@color/white"
+            android:padding="10dp"></TextView>
 
     </LinearLayout>
-
 
 </FrameLayout>

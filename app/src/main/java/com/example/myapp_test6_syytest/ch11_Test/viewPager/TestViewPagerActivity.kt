@@ -15,8 +15,8 @@ class TestViewPagerActivity : AppCompatActivity() {
 
         //더미 재사용
         val testDataSet = ArrayList<String>()
-        for (i in 0..5) {
-            testDataSet.add("TEST DATA$i")
+        for (i in 1..5) {
+            testDataSet.add("테스트$i")
         }
         // 외부기능이니 디펜던시를 추가해야함 .
         // 뷰페이저 방식 1) 어댑터 사용방법 2) 프래그 먼트 이용
@@ -30,6 +30,6 @@ class TestViewPagerActivity : AppCompatActivity() {
         //방법의 2번
         binding.viewPager2.adapter = MyFragmentPagerAdapter(this)
 
-
+        binding.viewPager3.adapter = MyFragmentPagerAdapter2(this)
     }
 }

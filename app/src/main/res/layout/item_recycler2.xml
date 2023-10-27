@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/item_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:background="@color/main_text_bgcolor"
+    >
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:src="@drawable/s"
+        >
+    </ImageView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="40dp">
+
+        <TextView
+            android:id="@+id/testText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘은 금요일"
+            style="@style/myTestCss"
+            >
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저녁머먹지"
+            android:textColor="@color/white"
+            android:background="@color/design_default_color_primary"
+            style="@style/myTestCss"
+            >
+
+        </TextView>
+    </LinearLayout>
+
+
+</LinearLayout>
