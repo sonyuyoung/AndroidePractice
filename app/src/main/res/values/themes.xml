@@ -18,7 +18,7 @@
     <style name="myToolBarCss">
         <item name="android:textSize">@dimen/text_size</item>
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">@color/main_text_bgcolor</item>
+        <item name="android:background">#8BC34A</item>
         <item name="android:fontFamily">@font/nexonmed</item>
     </style>
 </resources>

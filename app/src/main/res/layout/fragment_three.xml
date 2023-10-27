@@ -3,16 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ch11_Test.OneFragment">
+    tools:context=".ch11_Test.ThreeFragment">
 
     <TextView
-        android:id="@+id/fragment1"
+        android:id="@+id/fragment3"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="@color/main_text_bgcolor"
-        android:text="onefregment"
+        android:background="#FF9800"
+        android:text="Threefregment"
         android:textSize="30sp"
         android:textColor="@color/white"
-        android:gravity="center"/>
+        android:gravity="center" />
 
 </FrameLayout>
