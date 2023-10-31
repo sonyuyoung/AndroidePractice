@@ -1,45 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ch11_Test.viewPageandrecyclerview.TestPageRecyclerActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager1"
-        android:layout_width="match_parent"
-        android:layout_height="300dp">
-    </androidx.viewpager2.widget.ViewPager2>
+    android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewTest"
-        android:layout_width="match_parent"
-        android:layout_height="330dp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/addBtn"
+        android:layout_height="match_parent"
+        tools:context=".ch11_Test.viewPageandrecyclerview.TestPageRecyclerActivity">
+                    <include layout="@layout/toolbar_main_layout"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--CoordinatorLayout : 뷰2개를 상호작용하게끔 묶어주는 역할 -->
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--      툴바 밑에 앱의 소개나 특정의 화면을 나타낼때          -->
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                    <!--앱바를 구성하기 (툴바 포함하기.)-->
+                    <!--일반 앱바 화면 -> 접히는 화면으로 변경.
+                    CollapsingToolbarLayout-->
+
+                    <!--CollapsingToolbarLayout 상포작용하는 뷰를 연결시켜줌. : 스크롤 동작시 양쪽으로 같이 동작?              -->
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@color/main_text_bgcolor"
+                        app:title="AppBar Title"
+                        app:contentScrim="#03A9F4"
+                        app:expandedTitleTextColor="@color/white"
+                        app:expandedTitleMarginBottom="50dp"
+                        app:expandedTitleMarginStart="50dp"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                        <!-- 완전히 사라지게하거나.. 접히게하거나, -->
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#9EDD7D9E"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bn2"
+                            app:layout_collapseMode="parallax"
+                            ></ImageView>
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            app:layout_collapseMode="pin" />
+
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <!-- 연동이 되는부분  -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                <!--뷰1번끝 자식의 요소가 2개 1) 앱바 2) 리사이클러뷰
+                 2번의 리사이클러뷰에서 app:layout_behavior를 이용해서 스크롤시 움직임을 조절할수있음-->
+
+                <!--                </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewTest2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <!--                <Button-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="test" />-->
+
+            <!--                <Button-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="test" />-->
+
+            <!--                <Button-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="test" />-->
+
+            <!--                <Button-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="test" />-->
+
+            <!-- 연동이 되는부분  -->
+
+            <Button
+                android:id="@+id/addBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="80dp"
+
+                android:text="데이터 추가"></Button>
+
+            <Button
+                android:id="@+id/addBtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="30dp"
+                android:text="데이터 삭제"></Button>
+            <!--뷰2번 -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="데이터 추가"
-            >
-        </Button>
-        <Button
-            android:id="@+id/addBtn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="데이터 추가2"
-            >
-        </Button>
-    </LinearLayout>
-</LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginTop="70dp"
+            android:text="해당문자열 출력해보기"
+            app:icon="@drawable/baseline_home_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    <!--    <TextView-->
+    <!--        android:layout_width="400dp"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:text="테스트 서랍화면"-->
+    <!--        style="@style/myTestCss"-->
+    <!--        android:gravity="center_horizontal|center_vertical"-->
+    <!--        android:layout_gravity="start"-->
+    <!--        />-->
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/main_drawer_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/navigation_menu">
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+

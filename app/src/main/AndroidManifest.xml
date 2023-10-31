@@ -20,11 +20,27 @@
         android:theme="@style/Theme.Myapp_test6_SyyTest"
         tools:targetApi="31">
         <activity
-            android:name=".ch11_Test.viewPageandrecyclerview.TestPageRecyclerActivity"
+            android:name=".TabTest.ViewTest2Activity"
             android:exported="true" />
-<!--        <activity-->
-<!--            android:name=".ch11_Test.recycler.MyAdapter2Activity"-->
-<!--            android:exported="true" />-->
+        <activity
+            android:name=".TabTest.ViewPagerAdapterTest"
+            android:exported="true" />
+        <activity
+            android:name=".TabTest.TabTest2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".TabTest.TabTestActivity"
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".ch12_Test.adapter.RecyclerViewTest" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity -->
+        <!-- android:name=".ch12_Test.TabTestActivity" -->
+        <!-- android:exported="true" /> -->
+        <activity
+            android:name=".ch11_Test.viewPageandrecyclerview.TestPageRecyclerActivity"
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".ch11_Test.recycler.MyAdapter2Activity" -->
+        <!-- android:exported="true" /> -->
         <activity
             android:name=".ch11_Test.viewPager.TestViewPagerActivity"
             android:exported="true" />

@@ -11,14 +11,21 @@
     <style name="myTestCss">
         <item name="android:textSize">@dimen/text_size</item>
         <item name="android:textColor">@color/main_text_color</item>
-        <!--        <item name="android:background">@color/main_text_bgcolor</item>-->
+                <item name="android:background">@color/main_text_bgcolor</item>
         <item name="android:fontFamily">@font/nexonmed</item>
     </style>
 
     <style name="myToolBarCss">
         <item name="android:textSize">@dimen/text_size</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#8BC34A</item>
-        <item name="android:fontFamily">@font/nexonmed</item>
+<!--        <item name="android:textColor">#FFFFFF</item>-->
+        <item name="android:background">#DD7D9E</item>
+        <item name="android:fontFamily">@font/nexonbold</item>
+    </style>
+
+    <style name="myToolBarCss2">
+        <item name="android:textSize">@dimen/text_size</item>
+                <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@color/design_default_color_primary</item>
+        <item name="android:fontFamily">@font/nexonbold</item>
     </style>
 </resources>
