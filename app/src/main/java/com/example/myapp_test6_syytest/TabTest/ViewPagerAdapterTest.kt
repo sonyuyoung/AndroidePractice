@@ -3,9 +3,9 @@ package com.example.myapp_test6_syytest.TabTest
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.myapp_test6_syytest.ch11_Test.viewPageandrecyclerview.fragment.Test1Fragment
-import com.example.myapp_test6_syytest.ch11_Test.viewPageandrecyclerview.fragment.Test2Fragment
-import com.example.myapp_test6_syytest.ch11_Test.viewPageandrecyclerview.fragment.Test3Fragment
+import com.example.myapp_test6_syytest.ch11_12_Test.viewPageandrecyclerview.fragment.Test1Fragment
+import com.example.myapp_test6_syytest.ch11_12_Test.viewPageandrecyclerview.fragment.Test2Fragment
+import com.example.myapp_test6_syytest.ch11_12_Test.viewPageandrecyclerview.fragment.Test3Fragment
 
 
 class ViewPagerAdapterTest ( fragmentActivity : FragmentActivity): FragmentStateAdapter(fragmentActivity){

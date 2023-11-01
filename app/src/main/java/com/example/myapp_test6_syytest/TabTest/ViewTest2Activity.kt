@@ -1,16 +1,20 @@
 package com.example.myapp_test6_syytest.TabTest
 
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowInsets
+import android.view.WindowInsetsController
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapp_test6_syytest.R
-import com.example.myapp_test6_syytest.ch11_Test.viewPageandrecyclerview.adapter.RecyclerViewTest
+import com.example.myapp_test6_syytest.ch11_12_Test.viewPageandrecyclerview.adapter.RecyclerViewTest
 import com.example.myapp_test6_syytest.databinding.ActivityViewTest2Binding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -22,6 +26,27 @@ class ViewTest2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityViewTest2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.fullscreen.setOnClickListener {
+            // 전체 화면 설정 코드.
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                window.setDecorFitsSystemWindows(false)
+                val controller = window.insetsController
+                if (controller != null) {
+                    controller.hide(
+
+                        WindowInsets.Type.statusBars() or
+                                WindowInsets.Type.navigationBars())
+                    controller.systemBarsBehavior =
+                        WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+                }
+            } else {
+                window.setFlags(
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN)
+            }
+
+        }
 
         //탭 뷰와 뷰페이져2 연동 .
         val tabLayout = binding.Test2tabs
@@ -189,7 +214,7 @@ class ViewTest2Activity : AppCompatActivity() {
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextChange(newText: String?): Boolean {
                 //검색어가 변경시 마다, 실행될 로직을 추가.
-                Log.d("lsy","텍스트 변경시 마다 호출 : ${newText} ")
+                Log.d("syy","텍스트 변경시 마다 호출 : ${newText} ")
                 return true
             }
 

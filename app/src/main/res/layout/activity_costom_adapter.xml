@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ch11_Test.recyclerDataTest.CostomAdapter">
+    tools:context=".ch11_12_Test.recyclerDataTest.CostomAdapter">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

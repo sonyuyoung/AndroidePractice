@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapp_test6_syytest.R
-import com.example.myapp_test6_syytest.ch11_Test.viewPageandrecyclerview.fragment.Test1Fragment
-import com.example.myapp_test6_syytest.ch11_Test.viewPageandrecyclerview.fragment.Test2Fragment
-import com.example.myapp_test6_syytest.ch11_Test.viewPageandrecyclerview.fragment.Test3Fragment
+import com.example.myapp_test6_syytest.ch11_12_Test.viewPageandrecyclerview.fragment.Test1Fragment
+import com.example.myapp_test6_syytest.ch11_12_Test.viewPageandrecyclerview.fragment.Test2Fragment
+import com.example.myapp_test6_syytest.ch11_12_Test.viewPageandrecyclerview.fragment.Test3Fragment
 import com.example.myapp_test6_syytest.databinding.ActivityTabTestBinding
 import com.google.android.material.tabs.TabLayout
 

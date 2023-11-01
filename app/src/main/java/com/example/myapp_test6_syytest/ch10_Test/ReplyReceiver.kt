@@ -16,7 +16,7 @@ class ReplyReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         val replyTxt = RemoteInput.getResultsFromIntent(intent)?.getCharSequence("key_text_reply")
-        Log.d("lsy", "replyTxt : $replyTxt")
+        Log.d("syy", "replyTxt : $replyTxt")
 
         val manager = context.getSystemService(AppCompatActivity.NOTIFICATION_SERVICE) as NotificationManager
         val builder: NotificationCompat.Builder

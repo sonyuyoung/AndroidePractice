@@ -18,7 +18,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context=".ch11_Test.ViewTest2Activity">
+        tools:context=".ch11_12_Test.ViewTest2Activity">
 
 
         <LinearLayout
@@ -135,7 +135,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginStart="80dp"
+
                             android:text="데이터추가" />
 
                         <Button
@@ -143,8 +143,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginStart="30dp"
                             android:text="데이터삭제" />
+
+                        <Button
+                            android:id="@+id/fullscreen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:text="전체화면" />
 
                     </LinearLayout>
 

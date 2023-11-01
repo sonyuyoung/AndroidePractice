@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <!--  -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 세트 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -19,6 +20,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Myapp_test6_SyyTest"
         tools:targetApi="31">
+        <provider
+            android:name=".ch16_Test.MyContentProvider"
+            android:authorities="com.example.test1234"
+            android:enabled="true"
+            android:exported="true"></provider>
+
+        <activity
+            android:name=".ch13_1.TestCoroutineActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ch13_1.TestBundleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ch13_1.TestIntent2DetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ch13_1.TestIntentActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".TabTest.ViewTest2Activity"
             android:exported="true" />
@@ -37,27 +57,27 @@
         <!-- android:name=".ch12_Test.TabTestActivity" -->
         <!-- android:exported="true" /> -->
         <activity
-            android:name=".ch11_Test.viewPageandrecyclerview.TestPageRecyclerActivity"
+            android:name=".ch11_12_Test.viewPageandrecyclerview.TestPageRecyclerActivity"
             android:exported="true" /> <!-- <activity -->
         <!-- android:name=".ch11_Test.recycler.MyAdapter2Activity" -->
         <!-- android:exported="true" /> -->
         <activity
-            android:name=".ch11_Test.viewPager.TestViewPagerActivity"
+            android:name=".ch11_12_Test.viewPager.TestViewPagerActivity"
             android:exported="true" />
         <activity
-            android:name=".ch11_Test.recyclerDataTest.TestRecyclerDataActivity"
+            android:name=".ch11_12_Test.recyclerDataTest.TestRecyclerDataActivity"
             android:exported="true" />
         <activity
-            android:name=".ch11_Test.Test11_RecyclerViewActivity"
+            android:name=".ch11_12_Test.Test11_RecyclerViewActivity"
             android:exported="true" />
         <activity
-            android:name=".ch11_Test.Test11_FragmentActivity"
+            android:name=".ch11_12_Test.Test11_FragmentActivity"
             android:exported="true" />
         <activity
-            android:name=".ch11_Test.Test11_ToolBarActivity"
+            android:name=".ch11_12_Test.Test11_ToolBarActivity"
             android:exported="true" />
         <activity
-            android:name=".ch11_Test.Tes11_ActionBarActivity"
+            android:name=".ch11_12_Test.Tes11_ActionBarActivity"
             android:exported="true" />
 
         <receiver
