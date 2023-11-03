@@ -8,7 +8,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 13버전 이후 변경된 이미지 저장소 접근허용방식 -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> <!-- 외부통신 하기위해 인터넷 퍼미션 추가 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +22,21 @@
         android:theme="@style/Theme.Myapp_test6_SyyTest"
         tools:targetApi="31">
         <activity
+            android:name=".ch18_Test.HttpTestReqResActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ch17_Test.preferenceTest.SharedPreferDetailTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ch17_Test.preferenceTest.SharedPreferTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ch17_Test.SQLlight.DbTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ch16_Test.MultiImageRecyclerActivity"
+            android:exported="true" />
+        <activity
             android:name=".ch16_Test.TestImageActivity"
             android:exported="true" />
         <!--
@@ -28,15 +44,16 @@
            authorities 이없으면 정보를 제공받을수없음
           외부에서 접근할때 식별값으로 사용됨 (마치 암호처럼 사용)
         -->
-<!--        저장소 위치 정하고 해당 uri 위치에 접근허가 필요  -->
+        <!-- 저장소 위치 정하고 해당 uri 위치에 접근허가 필요 -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.myapp_test6_syytest.fileprovider"
             android:enabled="true"
             android:exported="false"
             android:grantUriPermissions="true">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
         </provider>
 
         <activity

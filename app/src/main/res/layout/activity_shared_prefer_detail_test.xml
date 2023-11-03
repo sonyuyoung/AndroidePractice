@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ch17_Test.preferenceTest.SharedPreferDetailTestActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/getSheardPrefer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="정보가져오기"
+        android:textSize="20sp"
+        android:layout_gravity="center"></Button>
+    <TextView
+
+        android:id="@+id/resultEmailSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        ></TextView>
+    <TextView
+        android:id="@+id/resultPasswordSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        ></TextView>
+    <TextView
+        android:id="@+id/resultRadioSP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"/>
+
+    <Button
+        android:id="@+id/deleteSharedPreferBtnTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="삭제 테스트"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/deleteFilePreferBtnTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="파일전체삭제"
+        android:textSize="20sp"
+        android:layout_gravity="center"></Button>
+
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
