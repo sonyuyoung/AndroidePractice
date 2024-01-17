@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication1030.adapter.RecyclerViewTest
 import com.example.myapplication1030.databinding.ActivityTabBinding
 
+//리사이클러뷰 아이템더보기
 class TabActivity : AppCompatActivity() {
     lateinit var binding : ActivityTabBinding
     var newDataNumber = 11
