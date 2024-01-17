@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".ch18_Test.retrofit.MyApplication"
+        android:name=".ch18_Test.retrofit.MyApplication3"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -23,8 +23,20 @@
         android:theme="@style/Theme.Myapp_test6_SyyTest"
         tools:targetApi="31">
         <activity
-            android:name=".ch18_Test.HttpTestReqResActivity"
+            android:name=".ch19_TestFire.FirebaseActivity"
             android:exported="false" />
+        <activity
+            android:name=".ch18_Test.UserTableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ch18_Test.PublicDataTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ch18_Test.NewsApiTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ch18_Test.HttpTestReqResActivity"
+            android:exported="true" />
         <activity
             android:name=".ch17_Test.preferenceTest.SharedPreferDetailTestActivity"
             android:exported="true" />
