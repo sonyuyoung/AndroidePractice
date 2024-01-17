@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -51,6 +52,7 @@ class MultiImageRecyclerActivity : AppCompatActivity() {
                     // 각요소의 사진uri가져오기
 
                     val imageUri = it.data!!.clipData?.getItemAt(i)?.uri
+                    Log.d("lsy","사진첩에서 선택 된 사진 위치 : " + imageUri)
                     if (imageUri != null) {
                         list.add(imageUri)
                     }

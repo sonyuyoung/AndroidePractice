@@ -12,13 +12,13 @@ import com.google.gson.annotations.SerializedName
 data class UserModel(
 
     val id:String,
-
     @SerializedName("first_name")
     // firstName -> first_name으로 저장
     val firstName:String,
     @SerializedName("last_name")
     val lastName:String,
     // 프로필이미지가 저장된 위치의 url 주소
+    val email : String,
     val avatar : String,
 
     // 추가로 속성값 더 가져오기 테스트
